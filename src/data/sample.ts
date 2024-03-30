@@ -1,0 +1,32 @@
+export const productsSample: Product[] = [
+    {
+        picture: "POKER.png",
+        screenShot: "hi",
+        title: "Poker",
+        gameURI: "https://coder-1t45.github.io/Poker/",
+        markDown: "https://raw.githubusercontent.com/Coder-1t45/Poker/main/README.md",
+        github: "https://github.com/Coder-1t45/Poker",
+        pictures: [],
+        videos: [],
+    },
+    {
+        picture: "MONOPOLY.png",
+        screenShot: "hi",
+        title: "Monopoly",
+        gameURI: "https://coder-1t45.github.io/Monopoly/",
+        markDown: "https://raw.githubusercontent.com/Coder-1t45/Monopoly/main/README.md",
+        github: "https://github.com/Coder-1t45/Monopoly",
+        pictures: [],
+        videos: [],
+    },
+    {
+        picture: "TRIVIA.png",
+        screenShot: "hi",
+        title: "Trivia",
+        gameURI: "https://coder-1t45.github.io/Trivia.IO/",
+        markDown: "https://raw.githubusercontent.com/Coder-1t45/Trivia.IO/main/README.md",
+        github: "https://github.com/Coder-1t45/Trivia.IO",
+        pictures: [],
+        videos: [],
+    },
+];
