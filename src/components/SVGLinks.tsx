@@ -11,7 +11,7 @@ export default function ({ darkMode }: { darkMode: boolean }) {
             </button> */}
             <button
                 onClick={() => {
-                    useURLBlank("https://github.com/Coder-1t45");
+                    useURLBlank("https://github.com/itaylayzer");
                 }}
             >
                 <GithubSVG color={darkMode ? "#FFFFFF" : "#00000"} />

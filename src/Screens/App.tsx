@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ScrollView from "../components/ScrollView";
 import useURLBlank from "../hooks/useURLBlank";
 import DateTimer from "../components/DateTimer";
-import TWEEN from "@tweenjs/tween.js";
+import TWEEN, { Tween } from "@tweenjs/tween.js";
 import useTitle from "../hooks/useTitle";
 import SunSVG from "../assets/svg/SunSVG";
 import SVGLinks from "../components/SVGLinks";
@@ -32,30 +32,53 @@ function App({
             setNavIndex(defualtNav);
             return;
         }
+
+        let intervals: number[] = [];
+        let tween: Tween<any> | undefined = undefined;
+
         const startX = { x: element.scrollLeft };
         const endX = { x: nav * window.innerWidth };
-        const tween = new TWEEN.Tween(startX)
-            .to(endX)
-            .easing(TWEEN.Easing.Exponential.Out)
-            .duration(1600)
-            .onUpdate((value) => {
-                console.log(value);
-                element.scrollTo(value.x, 0);
-            })
-            .start(0);
-        let time = 0;
-        const interval = setInterval(() => {
-            tween.update((time += 1000 / 17));
-        }, 17);
+
+        function startTween() {
+            for (const interval of intervals) clearInterval(interval);
+            intervals = [];
+            if (tween) tween.stop();
+            tween = new TWEEN.Tween(startX)
+                .to(endX)
+                .easing(TWEEN.Easing.Exponential.Out)
+                .duration(1600)
+                .onUpdate((value) => {
+                    element!.scrollTo(value.x, 0);
+                })
+                .start(0);
+            let time = 0;
+            intervals.push(
+                setInterval(() => {
+                    tween?.update((time += 1000 / 17));
+                }, 17)
+            );
+        }
+
+        function onResize() {
+            console.log("holla");
+            startTween();
+            console.log("holla");
+        }
+
+        startTween();
+
+        window.addEventListener("resize", onResize);
 
         return () => {
-            clearInterval(interval);
-            tween.stop();
+            for (const interval of intervals) clearInterval(interval);
+            if (tween) tween.stop();
+            intervals = [];
+            window.removeEventListener("resize", onResize);
         };
-    }, [switcherMainRef, nav, window.innerWidth]);
+    }, [switcherMainRef, nav]);
 
     useEffect(() => {
-        const titles = ["Coder-1t45", "Portfolio", "Resume"];
+        const titles = ["itaylayzer", "Portfolio", "Resume"];
         try {
             useTitle(titles[nav]);
         } catch {}
@@ -74,7 +97,7 @@ function App({
                         }}
                         data-main
                     >
-                        Coder-1t45
+                        itaylayzer
                     </button>
                     <button
                         data-selected={nav === 1}
@@ -112,7 +135,7 @@ function App({
             <main ref={switcherMainRef} data-switcher>
                 <main className="main">
                     <div>
-                        <h4>Coder-1t45 Presents:</h4>
+                        <h4>itaylayzer Presents:</h4>
                         <h1 style={{ marginTop: "0px", marginBottom: "0px", translate: "0px -20px" }}>
                             <span style={{ opacity: 0.5 }}>Pick</span> <span style={{ opacity: 0.75 }}>your </span>
                             <span

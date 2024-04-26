@@ -9,7 +9,7 @@ function App({ darkMode, SetDarkMode }: { darkMode: boolean; SetDarkMode: React.
                 <div></div>
                 <div style={{ gap: 20 }}>
                     <button style={{ whiteSpace: "nowrap" }} onClick={() => useURLGoto()} data-main>
-                        Coder-1t45
+                        itaylayzer
                     </button>
                     <button onClick={() => useURLGoto("portfolio")}>Portfolio</button>
                     <button onClick={() => useURLGoto("resume")}>Resume</button>
