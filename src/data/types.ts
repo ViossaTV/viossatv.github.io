@@ -1,10 +1,11 @@
-type Product = {
+export type Product = {
     title: string;
-    screenShot: string;
     picture: string;
-    gameURI: string;
-    markDown: string;
-    github: string;
-    pictures: string[];
-    videos: string[];
+    gameURI?: string;
+    markDown?: string;
+    github?: string;
+    level: number;
+    gallery?: [string[] | undefined, string[] | undefined];
+    tags?: number;
+    playable?: boolean;
 };
