@@ -16,6 +16,7 @@ import { statusColors, statusExplenations, tags } from "../data/constants";
 import ReactMK from "react-markdown";
 import useMarkdown from "../api/useMarkdown";
 import AsyncLoader from "./AsyncLoader";
+import remarkGfm from "remark-gfm";
 
 export function SlideShow({ products }: { products: Product[] }) {
     const [slideIndex, setSlideIndex] = useState<number>(0);
@@ -303,7 +304,9 @@ export function SlideShow({ products }: { products: Product[] }) {
                                 )}
                                 fThen={(data) => (
                                     <div className="react-mk">
-                                        <ReactMK>{data}</ReactMK>
+                                        <ReactMK remarkPlugins={[remarkGfm]}>
+                                            {data}
+                                        </ReactMK>
                                     </div>
                                 )}
                                 fCatch={(r) => <p>error {r.message}</p>}
