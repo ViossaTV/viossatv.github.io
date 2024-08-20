@@ -52,7 +52,11 @@ export const productsSample: Product[][] = [
             picture: "",
             title: "First Person Shooter",
             level: 2,
-            tags: 0b1101010
+            tags: 0b1101010,
+            markDown:
+                "https://raw.githubusercontent.com/itaylayzer/playground-fps/master/README.md",
+            github: "https://github.com/itaylayzer/playground-fps",
+            gameURI: "https://itaylayzer.github.io/playground-fps/"
         }
     ],
 
