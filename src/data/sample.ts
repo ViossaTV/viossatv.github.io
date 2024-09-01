@@ -51,7 +51,7 @@ export const productsSample: Product[][] = [
     {
       picture: "",
       title: "First Person Shooter",
-      level: 2,
+      level: 0,
       tags: 0b1101010,
       markDown:
         "https://raw.githubusercontent.com/itaylayzer/playground-fps/master/README.md",
@@ -61,7 +61,7 @@ export const productsSample: Product[][] = [
     {
       picture: "",
       title: "Kart Controller",
-      level: 2,
+      level: 0,
       tags: 0b1101010,
       markDown:
         "https://raw.githubusercontent.com/itaylayzer/playground-kart/master/README.md",
