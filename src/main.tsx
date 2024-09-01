@@ -1,39 +1,29 @@
-import { createRoot } from "react-dom/client";
-import App from "./app/App.tsx";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { ReactElement } from "react";
+import App from "./app/App";
+import { P404 } from "./app/P404";
 import "./style/index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { P404 } from "./app/P404.tsx";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { createRoot } from "react-dom/client";
 
-const IgnorePaths = ({ children }: { children: JSX.Element }) => {
+const KartRoute: React.FC<{ element: ReactElement }> = ({ element }) => {
   const location = useLocation();
   const pathname = location.pathname;
 
-  // Paths to ignore
-  const ignoredPaths = ["/kart.io"];
+  // Check if the path matches /kart.io/Username
+  if (pathname.startsWith("/kart.io/") && pathname.split("/").length === 3) {
+    // Render null to avoid rendering React Router's P404
+    return null;
+  }
 
-  useEffect(() => {
-    const shouldIgnore = ignoredPaths.some((ignoredPath) =>
-      pathname.startsWith(ignoredPath)
-    );
-
-    if (shouldIgnore) {
-      // Redirect the browser to let the static server handle the request
-      window.location.href = pathname;
-    }
-  }, [pathname]);
-
-  return children;
+  return element;
 };
 
 createRoot(document.body).render(
   <BrowserRouter>
-    <IgnorePaths>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="*" element={<P404 />} />
-      </Routes>
-    </IgnorePaths>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/kart.io/*" element={<KartRoute element={<P404 />} />} />
+      <Route path="*" element={<P404 />} />
+    </Routes>
   </BrowserRouter>
 );
