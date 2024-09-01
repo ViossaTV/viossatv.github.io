@@ -72,6 +72,12 @@ export const productsSample: Product[][] = [
 
   [
     {
+      title: "Kart.io",
+      level: 2,
+      picture: "",
+      gameURI: "https://itaylayzer.github.io/kart.io/",
+    },
+    {
       picture: "POKER.png",
       title: "Poker",
       gameURI: "https://itaylayzer.github.io/Poker/",
