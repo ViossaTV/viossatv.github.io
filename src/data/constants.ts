@@ -6,7 +6,7 @@ export const tags = [
     "PC",
     "Web",
     "Physics",
-    "Random Player"
+    "Random Player",
 ];
 
 export const statusColors = ["white", "#3474eb", "#eb6434"];
@@ -19,5 +19,5 @@ export const catExplenations = [
     "IO 3D Demos",
     "IO Games",
     "Local Games",
-    "Resume"
+    "Resume",
 ];
