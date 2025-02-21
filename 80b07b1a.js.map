@@ -6,13 +6,13 @@
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         
         <title>BebraBox</title>
-        <meta name="description" content="Bebrabox - твой пульт для мотов Jackbox.">
-        <meta name="application-name" content="BebraBox"/>
+        <meta name="description" content="Jackbox - Jewaltting fu du per Jackbox">
+        <meta name="application-name" content="Jackbox"/>
 
-        <meta name="og:url" content="https://jackbox.tv/">
-        <meta name="og:title" content="BebraBox">
+        <meta name="og:url" content="https://viossatv.jackbox.tv/">
+        <meta name="og:title" content="Jackbox">
         <meta name="og:type" content="website">
-        <meta name="og:description" content="Bebrabox - твой пульт для мотов Jackbox.">
+        <meta name="og:description" content="Jackbox - Jewaltting fu du per Jackbox">
         <meta name="og:image" content="./src/images/favicon-196x196.png">
 
         <meta name="mobile-web-app-capable" content="yes">
