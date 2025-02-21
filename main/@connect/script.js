@@ -20711,25 +20711,25 @@ var Xae = JM((koe, _1) => {
         }
     }
     const $4 = {
-            BACK: "Назад",
-            CANCEL: "Отмена",
-            CLOSE: "Закрыть",
-            CONFIRM: "Подтвердить",
-            CREATE: "Создать",
-            DELETE: "Удалить",
-            DONE: "Готово",
-            EDIT: "Редактировать",
-            OK: "ОК",
-            NEXT: "Дальше",
-            NO: "Нет",
-            PLAY: "Играть",
-            PUBLISH: "Опубликовать",
-            REMOVE: "Удалить",
-            RESET: "Сбросить",
-            SUBMIT: "Отправить",
-            TRY_AGAIN: "Попробуй ещё раз",
-            UNDO: "Отмена",
-            YES: "Да"
+            BACK: "Suruk",
+            CANCEL: "Yamete",
+            CLOSE: "Kini",
+            CONFIRM: "Uslova",
+            CREATE: "Maha",
+            DELETE: "Keste",
+            DONE: "Owari",
+            EDIT: "Kawari",
+            OK: "Sige",
+            NEXT: "Beng",
+            NO: "Nai",
+            PLAY: "Spil",
+            PUBLISH: "Zeanta",
+            REMOVE: "Keste",
+            RESET: "Keste al",
+            SUBMIT: "Zeposta",
+            TRY_AGAIN: "Iskat gen",
+            UNDO: "Vasu",
+            YES: "Akk"
         },
         D4 = {
             UGC: {
@@ -20740,7 +20740,7 @@ var Xae = JM((koe, _1) => {
             }
         },
         k4 = {
-            DISCONNECTED: "Подключение ушло за хлебом.",
+            DISCONNECTED: "Du miludan tsunagazma.",
             DRAWING_NOTHING: "Ты должен что-то нарисовать!",
             PLAYER_KICKED: "Ты забанен, я не буду тебя разбанивать.",
             ROOM_DESTROYED: "Спасибо за игру!",
