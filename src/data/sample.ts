@@ -4,7 +4,7 @@ export const productsSample: Product[][] = [
     [
         {
             picture: "MONOPOLY.png",
-            title: "Monopoly",
+            title: "Lesteharspil",
             gameURI: "https://viossatv.github.io/Lesteharspil/",
             markDown:
                 "https://raw.githubusercontent.com/ViossaTV/Lesteharspil/main/README.md",
